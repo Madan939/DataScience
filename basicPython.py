@@ -109,3 +109,21 @@
 # print(newCar)
 # for x,y in newCar.items():
 #     print(f"{x} = {y}")
+
+#calculator using match
+# num_1=float(input("Enter first number: "))
+# num_2=float(input("Enter second number: "))
+# operator=input("Enter operator: ")
+# match operator:
+#     case "+":
+#         print("Addition= "+num_1+num_2)
+#     case "-":
+#         print("Subtraction= "+num_1-num_2)
+#     case "*":
+#         print("Multiplication= "+num_1*num_2)
+#     case "/":
+#         print("Division= "+num_1/num_2)
+#     case "%":
+#         print("Modulus= "+num_1%num_2)
+#     case _:
+#         print("operator not found")

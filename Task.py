@@ -69,82 +69,72 @@
 # print(name[-4:-1])
 
 # Task.7: Get input from user and check if user name is in the list or not
-# name=["Ram","Shyam","Hari","Madan"]
-# password=["sksjbsuuwef","jskdncjbsc","sdjncduu","8ehduhedd"]
-# user=input("Enter your name:")
-# if user in name:
-#     print(f"{user} is in the list")
-# else:
-#     print(f"{user} not found")
+name_list=["Ram","Shyam","Hari","Madan"]
+user=input("Enter your name:")
+if user in name_list:
+    print(f"{user} is in the list")
+else:
+    print(f"{user} not found")
 
-# Task.8: Create a dictionary of usernames and passwords, extract all the usernames from the dictionary and input username from the user and check if the username is present in the extracted list of usernames
-# credentials={
-#     "Ram":"ramabc",
-#     "Shyam":"shyamabc",
-#     "Hari":"hariabc"
-# }
-#print all username
-# for x in credentials.keys():
-#     print (x)
-# check if username is present or not
-# name=input("Enter the username:")
-# if name in credentials.keys():
-#     print(f"{name} is in the list")
-# else:
-#     print(f"{name} is not in the list")
-#Simple calculator
-# num_1=float(input("Enter first number: "))
-# num_2=float(input("Enter second number: "))
-# operator=input("Enter operator: ")
-
-#using if,elif,else
-# if operator=="+":
-#     print("Addition= "+num_1+num_2)
-# elif operator=="-":
-#     print("Subtraction= "+num_1-num_2)
-# elif operator=="*":
-#     print("Multiplication= "+num_1*num_2)
-# elif operator=="/":
-#     print("Division= "+num_1/num_2)
-# elif operator=="%":
-#     print("Modulus= "+num_1%num_2)
-# else:
-#     print("operators didnot match:")
-    
-#using match
-# match operator:
-#     case "+":
-#         print("Addition= "+num_1+num_2)
-#     case "-":
-#         print("Subtraction= "+num_1-num_2)
-#     case "*":
-#         print("Multiplication= "+num_1*num_2)
-#     case "/":
-#         print("Division= "+num_1/num_2)
-#     case "%":
-#         print("Modulus= "+num_1%num_2)
-#     case _:
-#         print("operator not found")
-        
-# Task : Make login and register system
+# Task 8: Create a dictionary of usernames and passwords, extract all the usernames from the dictionary and input username from the user and check if the username is present in the extracted list of usernames
 credentials={
+    "Ram":"ramabc",
+    "Shyam":"shyamabc",
+    "Hari":"hariabc"
+}
+#print all username
+for x in credentials.keys():
+    print (x)
+# check if username is present or not
+name=input("Enter the username:")
+if name in credentials.keys():
+    print(f"{name} is in the list")
+else:
+    print(f"{name} is not in the list")
+
+#Simple calculator
+num_1=float(input("Enter first number: "))
+num_2=float(input("Enter second number: "))
+operator=input("Enter operator: ")
+if operator=="+":
+    print("Addition= "+num_1+num_2)
+elif operator=="-":
+    print("Subtraction= "+num_1-num_2)
+elif operator=="*":
+    print("Multiplication= "+num_1*num_2)
+elif operator=="/":
+    print("Division= "+num_1/num_2)
+elif operator=="%":
+    print("Modulus= "+num_1%num_2)
+else:
+    print("operators didnot match:")
+    
+        
+# Task 9 : Make login and register system
+credential={
     "Ram":"ram123",
     "Shyam":"shyam123"
 }
-user_input=int(input("Enter: 1 for login, 2. for register"))
+user_input=int(input("Enter:\n 1. For login \n 2. For Register\n"))
 
 match user_input:
     case 1:
         username=input("Enter user name:")
         password=input("Enter password: ")
-        if username in credentials and credentials.get(username)==password:
-            print("Login successfully")
+        if username in credential :
+            if credential.get(username)==password:
+                print("Login successfully")
+            else:
+                print("password did not match")
         else:
-            print("login failed")
+            print("username did not exist")
     case 2:
         username=input("Enter user name: ")
         password=input("Enter password: ")
-        credentials.update({username:password})
-        print("registered successfully")
+        if username in credential:
+            print("Username already exits.")
+        else:
+            credential.update({username:password})
+            print(f"user {username}, registered successfully")
     case _:
         print("input didnot match")
