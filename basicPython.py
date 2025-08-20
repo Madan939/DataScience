@@ -127,3 +127,33 @@
 #         print("Modulus= "+num_1%num_2)
 #     case _:
 #         print("operator not found")
+#loop
+#for loop
+# list=[1,2,3,4,5,6]
+# for i in list:
+#     print(i)
+# range(start,end,step)
+# for i in range(1,10,2):
+#     print(i)
+# i=0
+# j=5
+# while i<=9:
+#     mul=i+1
+#     print(f"{j}*{i+1}={j*mul}")
+#     i+=1
+
+# while True:
+#     user_input=int(input("Enter\n1. For addition\n2. For subtraction\n3. For exit\n"))
+#     num1=int(input("enter first number:"))
+#     num2=int(input("enter second number:"))
+#     match user_input:
+#         case 1:
+#             print(num1+num2)
+#         case 2:         
+#             print(num1-num2)
+#         case 3:
+#             print("Exiting..")
+#             break
+#         case _:
+#             print("invalid input")
+# print("Thank you for using system")
