@@ -1,15 +1,15 @@
 # Task. 12 :Calculator using methods
 def calculator(num1,num2,operator):
     if operator=="+":
-        return f"Addition={num1+num2}"
+        return print(f"Addition={num1+num2}")
     elif operator=="-":
-        return f"Subtraction={num1-num2}"
+        return print(f"Subtraction={num1-num2}")
     elif operator=="*":
-        return f"Multiplication={num1*num2}"
+        return print(f"Multiplication={num1*num2}")
     elif operator=="/":
-        return f"Division={num1/num2}"
+        return print(f"Division={num1/num2}")
     else:
-        return f"Modulus={num1%num2}"
+        return print(f"Modulus={num1%num2}")
     
 while True:
     user_input=int(input("Enter\n1. For addition\n2. For subtraction\n3. For Multiplication\n4. For Division\n5. For Modulus\n6. For exiting\n"))
@@ -20,14 +20,14 @@ while True:
     num2=int(input("enter second number:"))
     match user_input:
         case 1:
-            print(calculator(num1,num2,"+"))
+            calculator(num1,num2,"+")
         case 2:
-            print(calculator(num1,num2,"-"))
+            calculator(num1,num2,"-")
         case 3:
-            print(calculator(num1,num2,"*"))
+            calculator(num1,num2,"*")
         case 4:
-            print(calculator(num1,num2,"/"))
+            calculator(num1,num2,"/")
         case 5:
-            print(calculator(num1,num2,"%"))
+            calculator(num1,num2,"%")
         case _:
             print("invalid input")
