@@ -1,0 +1,1 @@
+[{"username": "Madan", "pin": 9999, "balance": 34500}, {"username": "Ram", "pin": 8888, "balance": 0}, {"username": "Shyam", "pin": 7777, "balance": 500}, {"username": "abc", "pin": 8888, "balance": 3500}]
